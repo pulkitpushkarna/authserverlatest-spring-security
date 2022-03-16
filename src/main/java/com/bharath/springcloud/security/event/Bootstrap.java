@@ -30,7 +30,7 @@ public class Bootstrap implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         if(Objects.isNull(userRepo.findByEmail("user1@gmail.com"))) {
             Role role = new Role();
-            role.setName("USER");
+            role.setName("ROLE_USER");
             Role savedRole = roleRepo.save(role);
 
             Set<Role> roles = new HashSet<>();
